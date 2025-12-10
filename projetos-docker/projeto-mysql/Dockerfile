@@ -5,4 +5,4 @@ FROM mysql:8.0
 #  pela primeira vez
 COPY ./script-inicial.sql /docker-entrypoint-initdb.d/
 # Definimos variáveis de ambiente padrão (opcional)
-ENV MYSQL_ROOT_PASSWORD=senha-secreta
+ENV MYSQL_ROOT_PASSWORD=mel2020gor

@@ -8,7 +8,7 @@ export class itemPedido {
         this._produto = produto
         this._quantidade = quantidade
     }
-    
+
     subTotal(): number {
         return this.produto.valor * this.quantidade
     }

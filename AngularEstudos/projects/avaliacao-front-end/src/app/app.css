@@ -1,0 +1,13 @@
+.texto-gasolina {
+    color: blue;
+}
+.texto-etanol {
+    color: green;
+}
+.texto-diesel {
+    color: black;
+    font-style: oblique; 
+}
+.texto-aditivada {
+    color: yellow;
+}

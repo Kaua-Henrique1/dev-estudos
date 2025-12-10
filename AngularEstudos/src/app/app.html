@@ -1,0 +1,26 @@
+<h2>Atividade POO</h2>
+
+<h3>Gabarito</h3>
+<p>Informe quantas questoes: <input type ="number" [(ngModel)]="respostasQuantidade"></p>
+<p>Informe o gabarito : <input [(ngModel)]="gabarito"></p>
+<p>Informe o gabarito do aluno : <input [(ngModel)]="gabaritoAluno"></p>
+
+<button (click)="verificarGabarito()">Verificar</button>
+<p>{{mensagemError}}</p>
+<p>{{mensagemAcertos}}</p>
+
+
+<h3>Verificacao CPF:</h3>
+<p>{{mensagem}}</p>
+<p>{{mensagemSaida}}</p>
+
+<h3>CPF</h3>
+Informe seu CPF : <input [(ngModel)]="cpf">
+<button (click)="verificacaoCpf()">Verificar</button>
+<h3>Verificacao CPF:</h3>
+<p>{{mensagem}}</p>
+<p>{{mensagemSaida}}</p>
+
+
+
+<router-outlet />

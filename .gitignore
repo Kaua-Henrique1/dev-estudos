@@ -1,0 +1,10 @@
+# Dependências do Node (Angular, TS, etc)
+**/node_modules
+**/dist
+
+# Arquivos de IDE (IntelliJ, VS Code)
+.idea/
+.vscode/
+
+# Arquivos de Sistema
+*.log

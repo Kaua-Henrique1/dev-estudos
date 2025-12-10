@@ -1,0 +1,12 @@
+<h3>Controle de Estoque com Signal e Computed</h3>
+<hr>
+
+<p>Estoque: {{estoque()}}</p>
+<p>Preço total do Estoque: {{valorTotal()}}</p>
+<hr>
+
+<button (click)="aumentarEstoque()">+</button>
+<button (click)="diminuirEstoque()">-</button>
+<hr>
+
+<router-outlet />

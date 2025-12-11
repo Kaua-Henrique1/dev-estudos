@@ -43,8 +43,13 @@ export class CarrinhoCompra {
     }
 
     adicionarItem(item: itemPedido) {
-        this._item.push(item)
-        this.totalCompra()
+        if (!this.verificarItemAdcionado(item)) {
+            this._item.push(item)
+            this.totalCompra()
+        }
+    }
+    verificarItemAdcionado(item: itemPedido) {
+        return this._item.find(i => i.produto.codigo === item.produto.codigo)
     }
     aumentarQuantItem(quantidade: number, codigoProduto: string) {
         for (const item of this._item) {

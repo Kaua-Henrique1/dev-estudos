@@ -57,7 +57,7 @@ Ter cuidado para mudar a variaveis do objeto depois que ja tenha passado por ref
 ---
 
 ##  Resumindo
-- **Tipos primitivos** → são passados por valor (cópia).
-- **Objetos** → são passados por referência (o método manipula o mesmo objeto).
+- **Tipos primitivos** --> são passados por valor (cópia).
+- **Objetos** --> são passados por referência (o método manipula o mesmo objeto).
 
 --- 

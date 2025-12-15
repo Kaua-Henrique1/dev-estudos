@@ -78,6 +78,11 @@
     - Impede que insira dados **duplicados**.
 - NOT NULL:
     - **NÃO** aceita valores nulos.
+
+- WHERE:
+    - Ele diz a condição para realizar comando.
+    - Ele serve para especificar de forma horizontal o campo que vai ser modificado. 
+
 - CHECK:
     - Define uma **regra**.
 - IN:
@@ -121,3 +126,42 @@ atualizado para NULL**.
                     /* aqui entram as regras referenciais */
                     ON DELETE CASCADE
                     ON UPDATE CASCADE
+
+
+---
+
+# Data Manipulation Language
+
+## INSERT: 
+- Insere registros na tabela.
+
+        INSERT INTO turma (nome, periodo) VALUES (‘Redes’, 1), (‘Mecatrônica’, 1);
+
+- OBS: 
+    - Campo **AUTO_INCREMENT** não precisa ser passado no INSERT
+    - Campos com restrição **NOT NULL** devem obrigatoriamente ser passados no INSERT
+    - Campos com restrição **UNIQUE** não permitem valores duplicados
+
+## SELECT
+
+- Ele retorna as informações do compo(s) que mencionou.
+
+        SELECT campo1, campo2, ... FROM tabela
+
+- '*' Ele retorna tudo da tabela 'turma'.
+
+        SELECT * FROM turma;
+
+## UPDATE 
+- Ele atualiza o valor
+ do atributo nome para 'Info' a onde atende a condição.
+
+        UPDATE turma SET nome=‘Info’ WHERE turma_id=1;
+
+## DELETE
+- Ele apaga o registro
+- WHERE (CUIDADO): Sempre use ele para especificar examentete a onde vai apagar.
+
+        DELETE FROM tabela WHERE CONDIÇÃO
+
+--- 

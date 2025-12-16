@@ -165,3 +165,44 @@ atualizado para NULL**.
         DELETE FROM tabela WHERE CONDIÇÃO
 
 --- 
+
+# CLÁUSULAS
+
+> As Cláusulas são partes de um comando (modificadores) SQL que
+> refinam a operação do comando principal.
+
+## SELECT DISTINCT
+- retorna apenas valores distintos (Valores não repetidos)
+
+        SELECT DISTINCT campo1, campo2, ... FROM tabela;
+
+- '*' Ele retorna tudo da tabela 'turma'.
+
+        SELECT * FROM turma;
+
+
+## WHERE
+
+## ORDER BY
+- define a ordenação com que os registros serão retornados, crescente ou decrescente;
+>ACS: ordenação crescente
+
+>DESC: ordenação decrescente
+
+## LIMIT e OFFSET
+- especifica a quantidade de registros a ser retornada pela consulta.
+> Útil para tabelas com milhares de registros
+
+> O retorno de um grande número de registros pode impactar na performance
+do sistema
+
+        SELECT campo1, campo2, ... FROM tabela WHERE condição
+        ORDER BY campo1, campo2, ... ASC | DESC LIMIT numero_maximo_de_linhas OFFSET numero_de_linhas_a_pular;
+
+## AND, OR e NOT
+-        SELECT campo1, campo2, ... FROM tabela WHERE condição1 {Operador} condição2;
+
+-        SELECT campo1, campo2, ...
+        FROM tabela
+        WHERE NOT (condição1);
+

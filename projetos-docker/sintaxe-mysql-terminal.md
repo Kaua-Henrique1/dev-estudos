@@ -78,6 +78,11 @@
     - Impede que insira dados **duplicados**.
 - NOT NULL:
     - **NÃO** aceita valores nulos.
+
+- WHERE:
+    - Ele diz a condição para realizar comando.
+    - Ele serve para especificar de forma horizontal o campo que vai ser modificado. 
+
 - CHECK:
     - Define uma **regra**.
 - IN:
@@ -121,3 +126,83 @@ atualizado para NULL**.
                     /* aqui entram as regras referenciais */
                     ON DELETE CASCADE
                     ON UPDATE CASCADE
+
+
+---
+
+# Data Manipulation Language
+
+## INSERT: 
+- Insere registros na tabela.
+
+        INSERT INTO turma (nome, periodo) VALUES (‘Redes’, 1), (‘Mecatrônica’, 1);
+
+- OBS: 
+    - Campo **AUTO_INCREMENT** não precisa ser passado no INSERT
+    - Campos com restrição **NOT NULL** devem obrigatoriamente ser passados no INSERT
+    - Campos com restrição **UNIQUE** não permitem valores duplicados
+
+## SELECT
+
+- Ele retorna as informações do compo(s) que mencionou.
+
+        SELECT campo1, campo2, ... FROM tabela
+
+- '*' Ele retorna tudo da tabela 'turma'.
+
+        SELECT * FROM turma;
+
+## UPDATE 
+- Ele atualiza o valor
+ do atributo nome para 'Info' a onde atende a condição.
+
+        UPDATE turma SET nome=‘Info’ WHERE turma_id=1;
+
+## DELETE
+- Ele apaga o registro
+- WHERE (CUIDADO): Sempre use ele para especificar examentete a onde vai apagar.
+
+        DELETE FROM tabela WHERE CONDIÇÃO
+
+--- 
+
+# CLÁUSULAS
+
+> As Cláusulas são partes de um comando (modificadores) SQL que
+> refinam a operação do comando principal.
+
+## SELECT DISTINCT
+- retorna apenas valores distintos (Valores não repetidos)
+
+        SELECT DISTINCT campo1, campo2, ... FROM tabela;
+
+- '*' Ele retorna tudo da tabela 'turma'.
+
+        SELECT * FROM turma;
+
+
+## WHERE
+
+## ORDER BY
+- define a ordenação com que os registros serão retornados, crescente ou decrescente;
+>ACS: ordenação crescente
+
+>DESC: ordenação decrescente
+
+## LIMIT e OFFSET
+- especifica a quantidade de registros a ser retornada pela consulta.
+> Útil para tabelas com milhares de registros
+
+> O retorno de um grande número de registros pode impactar na performance
+do sistema
+
+        SELECT campo1, campo2, ... FROM tabela WHERE condição
+        ORDER BY campo1, campo2, ... ASC | DESC LIMIT numero_maximo_de_linhas OFFSET numero_de_linhas_a_pular;
+
+## AND, OR e NOT
+-        SELECT campo1, campo2, ... FROM tabela WHERE condição1 {Operador} condição2;
+
+-        SELECT campo1, campo2, ...
+        FROM tabela
+        WHERE NOT (condição1);
+

@@ -1,6 +1,7 @@
 # Dependências do Node (Angular, TS, etc)
 **/node_modules
 **/dist
+npm-debug.log
 
 # Arquivos de IDE (IntelliJ, VS Code)
 .idea/
@@ -8,3 +9,8 @@
 
 # Arquivos de Sistema
 *.log
+
+# Java
+*.class
+.idea/
+*.iml

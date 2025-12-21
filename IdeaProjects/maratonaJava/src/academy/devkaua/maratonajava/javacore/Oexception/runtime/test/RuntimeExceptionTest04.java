@@ -20,6 +20,7 @@ public class RuntimeExceptionTest04 {
             // Da para juntar exceções e deixar o código mais legível.
             // OBS: Não pode usar uma class mais genérica junto com uma mais especifica.
             System.out.println("Erro ArrayIndexOutOfBoundsException | ArithmeticException");
+        // Por ultimo a classe Pai (Mais generica)
         } catch (RuntimeException e) {
             System.out.println("Erro RuntimeException");
         }

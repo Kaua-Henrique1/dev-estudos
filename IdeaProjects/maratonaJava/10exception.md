@@ -14,17 +14,17 @@
 - Regra: O compilador não obriga você a tratá-las (com try-catch ou throws).
     - Causa: Normalmente são erros do programador (divisão por zero, acessar índice inexistente em um array).
 
-      public static void main(String[] args) {
-      divisao(1,0);
-      System.out.println("Codigo finalizado");
-      }
-      private static int divisao(int a, int b) {
-      // exceção unchecked
-      if (b == 0){
-      throw new IllegalArgumentException("Não pode ser 0");
-      }
-      return a/b;
-      }
+          public static void main(String[] args) {
+          divisao(1,0);
+          System.out.println("Codigo finalizado");
+          }
+          private static int divisao(int a, int b) {
+          // exceção unchecked
+          if (b == 0){
+          throw new IllegalArgumentException("Não pode ser 0");
+          }
+          return a/b;
+          }
 - Tipo de Exceção: **IllegalArgumentException** é uma subclasse de **RuntimeException**.
 - Não precisou colocar throws IllegalArgumentException na assinatura do método.
 ### checked

@@ -1,4 +1,4 @@
-import { registroNotas } from "./resgistroNotas";
+import { registroNotas } from "./resgistroNotas.js";
 
 export enum turno {
     turnoMat = 'Matutino',

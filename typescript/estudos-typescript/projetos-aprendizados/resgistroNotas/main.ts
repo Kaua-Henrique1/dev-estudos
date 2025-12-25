@@ -1,7 +1,6 @@
-import { registroNotas } from "./resgistroNotas";
-import { diario } from "./diario";
-import { turno } from "./diario";
-import { SituacaoEstudante } from "./resgistroNotas";
+import { registroNotas } from "./resgistroNotas.js";
+import { diario } from "./diario.js";
+import { turno } from "./diario.js";
 
 
 let kaua = new registroNotas("Kauã H",20251148060019,60,50)

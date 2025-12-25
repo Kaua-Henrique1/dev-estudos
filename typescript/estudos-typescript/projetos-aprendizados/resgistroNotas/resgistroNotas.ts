@@ -17,16 +17,52 @@ export class registroNotas {
     private _mediaFinal: undefined | number = undefined;
     private _notaAvaliacaoFinal: undefined | number; 
 
-    constructor(_nomeEstudante: string,
-        _matriculaEstudante: number,
-        _notaBim1: number,
-        _notaBim2: number) {
-            this.nomeEstudante = _nomeEstudante
-            this.matriculaEstudante=_matriculaEstudante
-            this.notaBim1=_notaBim1
-            this.notaBim2=_notaBim2
+    constructor(nomeEstudante: string,
+        matriculaEstudante: number,
+        notaBim1: number,
+        notaBim2: number) {
+            this._nomeEstudante = nomeEstudante
+            this._matriculaEstudante=matriculaEstudante
+            this._notaBim1=notaBim1
+            this._notaBim2=notaBim2
     }
     
+    public calcularMedia()  {
+        if (this._notaBim1 !=0 && this._notaBim2!=0){
+            this._mediaParcial = ((this._notaBim1 * 2) + (this._notaBim2 * 3)) / 5
+
+            if (this._mediaParcial >= 60 ) {
+                this._situacaoEstudante = SituacaoEstudante.APROVADO
+            } else if (this._mediaParcial >= 10) {
+                this._situacaoEstudante = SituacaoEstudante.PROVAFINAL
+            } else {
+                this._situacaoEstudante = SituacaoEstudante.REPROVADO
+            }
+             
+            return {media_parcial: this._mediaParcial, situacao: this.situacaoEstudante}
+
+        }
+        
+       
+
+    }
+
+    public calcularMediaFinal(notaAvaliacaoFinal?: number) {
+   
+        if (this._situacaoEstudante !== SituacaoEstudante.PROVAFINAL || this._mediaParcial === undefined || notaAvaliacaoFinal === undefined ) return undefined; 
+        
+        this._mediaFinal = (notaAvaliacaoFinal + this._mediaParcial) / 2;
+
+        if (this._mediaFinal >= 60) {
+            this._situacaoEstudante = SituacaoEstudante.APROVADO;
+        } else {
+            this._situacaoEstudante = SituacaoEstudante.REPROVADO;
+        }  
+        this._notaAvaliacaoFinal = notaAvaliacaoFinal
+
+        return {identificacao: "Aluno(a): ", media_final: this.mediaFinal, situacao: this.situacaoEstudante}
+    }
+
     public get notaBim1(): number {
         return this._notaBim1;
     }
@@ -51,6 +87,7 @@ export class registroNotas {
     public set mediaFinal(value: undefined | number) {
         this._mediaFinal = value;
     }
+
     public get situacaoEstudante(): SituacaoEstudante {
         return this._situacaoEstudante;
     }
@@ -75,42 +112,5 @@ export class registroNotas {
     }
     public set notaAvaliacaoFinal(value: undefined | number) {
         this._notaAvaliacaoFinal = value;
-    }
-    
-    public calcularMedia()  {
-        if (this._notaBim1 !=0 && this._notaBim2!=0){
-            this._mediaParcial = ((this._notaBim1 * 2) + (this._notaBim2 * 3)) / 5
-
-            if (this._mediaParcial >= 60 ) {
-                this._situacaoEstudante = SituacaoEstudante.APROVADO
-            } else if (this._mediaParcial >= 10) {
-                this._situacaoEstudante = SituacaoEstudante.PROVAFINAL
-            } else {
-                this._situacaoEstudante = SituacaoEstudante.REPROVADO
-            }
-             
-            return {media_parcial: this._mediaParcial, situacao: this.situacaoEstudante}
-
-        }
-        
-       
-
-    }
-
-    public calcularMediaFinal(notaAvaliacaoFinal?: number | undefined) {
-   
-        if (this._situacaoEstudante !== SituacaoEstudante.PROVAFINAL || this._mediaParcial === undefined) {
-            return undefined; 
-        }
-        this._mediaFinal = (notaAvaliacaoFinal + this._mediaParcial) / 2;
-
-        if (this._mediaFinal >= 60) {
-            this._situacaoEstudante = SituacaoEstudante.APROVADO;
-        } else {
-            this._situacaoEstudante = SituacaoEstudante.REPROVADO;
-        }  
-        this._notaAvaliacaoFinal = notaAvaliacaoFinal
-
-        return {identificacao: "Aluno(a): ", media_final: this.mediaFinal, situacao: this.situacaoEstudante}
-    }
+    }  
 }

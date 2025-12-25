@@ -3,17 +3,24 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
-    "isolatedModules": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": false,
     "experimentalDecorators": true,
+    "moduleResolution": "node",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve"
+    "module": "ES2022",
+    "useDefineForClassFields": false,
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -24,35 +31,11 @@
   },
   "files": [],
   "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/exercicio-poo-classes/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/exercicio-poo-classes/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/avaliacao-front-end/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/avaliacao-front-end/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/exercicio-signals/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/exercicio-signals/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/exercicio-inicializacao-poo/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/exercicio-inicializacao-poo/tsconfig.spec.json"
-    }
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.spec.json" },
+    { "path": "./projects/avaliacao-front-end/tsconfig.app.json" },
+    { "path": "./projects/avaliacao-front-end/tsconfig.spec.json" },
+    { "path": "./projects/exercicio-signals/tsconfig.app.json" },
+    { "path": "./projects/exercicio-signals/tsconfig.spec.json" }
   ]
 }

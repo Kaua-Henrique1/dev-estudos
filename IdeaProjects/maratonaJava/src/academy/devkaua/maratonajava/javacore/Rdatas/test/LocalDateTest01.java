@@ -7,6 +7,7 @@ import java.util.Date;
 
 public class LocalDateTest01 {
     public static void main(String[] args) {
+        // Cria objetos com o Data
         System.out.println(new Date());
         System.out.println(Calendar.getInstance());
         System.out.println(Month.DECEMBER.getValue());

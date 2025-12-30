@@ -4,6 +4,7 @@ import java.time.LocalTime;
 
 public class LocalTimeTest01 {
     public static void main(String[] args) {
+        // Cria objetos com o Tempo
         LocalTime time = LocalTime.of(18,56,35);
         LocalTime timeNow = LocalTime.now();
 

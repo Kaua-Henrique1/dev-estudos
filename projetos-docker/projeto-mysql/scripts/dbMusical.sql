@@ -24,11 +24,11 @@ DROP TABLE IF EXISTS TbBanda;
 /* 4. Criar tabela TbBanda */
 CREATE TABLE TbBanda (
     CoBanda TINYINT AUTO_INCREMENT PRIMARY KEY,
-  b4
-COLLATE utf8mb4_unicode_ci;  NoBanda VARCHAR(50) NOT NULL,
+    NoBanda VARCHAR(50) NOT NULL,
     VaCache FLOAT
 ) ENGINE=InnoDB
-CHARACTER SET utf8m
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
 
 /* 5. Criar tabela TbIntegrante */
 CREATE TABLE TbIntegrante (

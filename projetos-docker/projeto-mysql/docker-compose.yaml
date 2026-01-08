@@ -1,18 +1,15 @@
 services:
   db:
-    # image: mysql:8.0
-    build: .
+    image: mysql:8.0
     container_name: turma-db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: mel
+      MYSQL_ROOT_PASSWORD: senha-secreta
       MYSQL_DATABASE: aula_db
     ports:
       - "3306:3306"
     volumes:
       - meus-dados-mysql:/var/lib/mysql
-      - ./historicos:/tmp
-      - ./scripts:/scripts
-      
+
 volumes:
   meus-dados-mysql:

@@ -1,40 +1,32 @@
-/* 1. Criar banco de dados (se não existir) */
+/* Criar banco de dados (se não existir) */
 CREATE DATABASE IF NOT EXISTS dbAdoacaoPet
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
 
-/* 2. Selecionar banco de dados
-   (Opcional: pode ser omitido se o banco estiver ativo no DBeaver)
-   Nos casos em que o script é executado fora do DBeaver, como por exemplo no terminal MySQL,
-   é necessário selecionar o banco explicitamente.
-*/
 USE dbAdoacaoPet;
 
-/* 1. Desativa verificação de chaves para permitir apagar as tabelas em qualquer ordem */
 SET FOREIGN_KEY_CHECKS = 0;
 
-/* 2. Limpeza (Drops) */
+DROP TABLE IF EXISTS Telefone;
 DROP TABLE IF EXISTS Pessoa_Adotador;
+DROP TABLE IF EXISTS Pets;
 DROP TABLE IF EXISTS Endereco_Pet_Encontrado;
 DROP TABLE IF EXISTS Sexo;
 DROP TABLE IF EXISTS Tipo;
 DROP TABLE IF EXISTS Porte;
-DROP TABLE IF EXISTS Pets;
 DROP TABLE IF EXISTS Endereco_Pessoa;
-DROP TABLE IF EXISTS Telefone;
 DROP TABLE IF EXISTS Cadastro_Adotar_Pet;
 
-/* 3. Reativa a verificação de segurança */
 SET FOREIGN_KEY_CHECKS = 1;
 
-/* 4. Criação das Tabelas */
+/* Criação das Tabelas */
 
 CREATE TABLE Endereco_Pet_Encontrado (
     id_endereco_pet INT AUTO_INCREMENT PRIMARY KEY,
     rua VARCHAR(100) NOT NULL,
     bairro VARCHAR(50) NOT NULL,
     cidade VARCHAR(50) NOT NULL,
-    numero VARCHAR(10) NOT NULL
+    numero VARCHAR(10)
 ) ENGINE=InnoDB CHARACTER SET utf8mb4;
 
 CREATE TABLE Sexo (
@@ -133,22 +125,22 @@ CREATE TABLE Cadastro_Adotar_Pet (
         ON UPDATE CASCADE
 ) ENGINE=InnoDB CHARACTER SET utf8mb4;
 
-/* 5. Inserção de Dados */
+/* Inserção de Dados */
 
 INSERT INTO Endereco_Pessoa (rua, bairro, cidade, numero) VALUES
-('Rua das Flores', 'Jardim Botânico', 'Curitiba', '100'),
-('Av. Paulista', 'Bela Vista', 'São Paulo', '1578'),
-('Rua da Praia', 'Boa Viagem', 'Recife', '45B');
+('Rua Vasco da Gama', 'Passagem de Areia', 'Parnamirim', '100'),
+('Rua Manoel Fernandes Neto', 'Nova Esperança', 'Parnamirim', '15'),
+('Rua Miguel Rocha', 'Candelária', 'Natal', '11');
 
 INSERT INTO Pessoa_Adotador (cpf, nome, email, id_endereco_pessoa) VALUES
-('11122233344', 'Lucas Carrilho', 'lucas@dev.com', 1),
-('22233344455', 'Ana Silva', 'ana.silva@gmail.com', 2),
-('33344455566', 'Carlos Souza', 'carlos@outlook.com', 3);
+('12343543453', 'Lucas Carrilho', 'lucas@gmail.com', 1),
+('23425423121', 'Kauã', 'kaua.h@gmail.com', 2),
+('21354367789', 'Marcos', 'marcos@outlook.com', 3);
 
 INSERT INTO Telefone (telefone, id_pessoa) VALUES
-('11999998888', 1),
-('19988887777', 2),
-('21977776666', 3);
+('84957834938', 1),
+('84998456321', 2),
+('84923700875', 3);
 
 INSERT INTO Sexo (sexo_animal) VALUES
 ('Macho'), ('Femea');
@@ -160,13 +152,13 @@ INSERT INTO Porte (porte_animal) VALUES
 ('Pequeno'), ('Medio'), ('Grande');
 
 INSERT INTO Endereco_Pet_Encontrado (rua, bairro, cidade, numero) VALUES
-('Parque Ibirapuera', 'Vila Mariana', 'São Paulo', 'S/N'),
-('Rodovia Anhanguera', 'Km 12', 'Osasco', 'S/N'),
-('Praia Grande', 'Canto do Forte', 'Praia Grande', '100');
+('Rua Tenente Medeiros', 'Centro', 'Parnamirim', '45'),
+('Av. Engenheiro Roberto Freire', 'Ponta Negra', 'Natal', NULL),
+('Av. Maria Lacerda Montenegro', 'Nova Parnamirim', 'Parnamirim', NULL);
 
 INSERT INTO Pets (nome, descricao, peso, data_nascimento, id_sexo, id_tipo, id_porte, id_endereco_pet) VALUES
-('Rex', 'Cachorro dócil encontrado na rua', 12.50, '2020-01-01', 1, 1, 2, 1),
-('Mia', 'Gatinha arisca', 3.00, '2022-05-10', 2, 2, 1, 2),
+('Lerce', 'Cachorrinha dócil encontrado na rua', 12.50, '2020-01-01', 2, 1, 2, 1),
+('Carlita', 'Gatinha arisca', 3.00, '2022-05-10', 2, 2, 1, 2),
 ('Thor', 'Cão de guarda bravo', 25.00, '2019-12-25', 1, 1, 3, 3);
 
 INSERT INTO Cadastro_Adotar_Pet (data_adocao, id_pessoa, id_pet) VALUES

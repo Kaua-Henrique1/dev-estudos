@@ -15,3 +15,7 @@ Projetos voltados para conteinerização e gerenciamento de bancos de dados.
 Execute o comando abaixo para entrar no prompt do MySQL:
 
         sudo docker exec -it turma-db mysql -u root -p
+
+Execute o comando abaixo para colocar o screipt.sql
+
+        docker exec -i turma-db mysql -u root -p < scripts/dbAdocaoPet.sql

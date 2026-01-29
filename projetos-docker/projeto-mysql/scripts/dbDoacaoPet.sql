@@ -1,5 +1,4 @@
 DROP DATABASE IF EXISTS dbAdoacaoPet;
-/* Criar banco de dados (se não existir) */
 CREATE DATABASE IF NOT EXISTS dbAdoacaoPet
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
@@ -41,6 +40,7 @@ CREATE TABLE TIPO_ESPECIE (
 
 CREATE TABLE VACINA_PET (
     id_vacina_pet INT AUTO_INCREMENT PRIMARY KEY,
+    data_vacina DATE NOT NULL,
     id_catalago_vacina INT NOT NULL,
     CONSTRAINT FK_CATALAGO_VACINA_CATALAGO
         FOREIGN KEY (id_catalago_vacina)
@@ -174,17 +174,17 @@ INSERT INTO CATALAGO_VACINA (nome_vacina, id_catalago_vacina) VALUES
 INSERT INTO TIPO_ESPECIE (tipo_animal) VALUES 
 ('Cachorro'), ('Gato');
 
-INSERT INTO VACINA_PET (id_vacina_pet, id_catalago_vacina) VALUES
-(1, 1),
-(2, 2),
-(3, 3),
-(4, 1),
-(5, 2), 
-(6, 1), 
-(7, 3), 
-(8, 2), 
-(9, 1), 
-(10, 2);
+INSERT INTO VACINA_PET (id_vacina_pet, data_vacina, id_catalago_vacina) VALUES
+(1, '2026-01-15', 1),
+(2, '2026-01-20', 2),
+(3, '2026-01-10', 3),
+(4, '2026-01-05', 1),
+(5, '2026-01-15', 2), 
+(6, '2026-01-10', 1), 
+(7, '2026-01-11', 3), 
+(8, '2025-12-01', 2), 
+(9, '2025-10-14', 1), 
+(10, '2025-11-05', 2);
 
 INSERT INTO ENDERECO_PET_ENCONTRADO (rua, bairro, cidade, numero) VALUES
 ('Rua Tenente Medeiros', 'Centro', 'Parnamirim', '45'),

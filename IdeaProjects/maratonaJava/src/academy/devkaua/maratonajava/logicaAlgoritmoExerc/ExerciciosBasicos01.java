@@ -1,9 +1,12 @@
 package academy.devkaua.maratonajava.logicaAlgoritmoExerc;
 
+import java.time.LocalDate;
+import java.util.Random;
+import java.util.Scanner;
+
 public class ExerciciosBasicos01 {
     public static void main(String[] args) {
-
-        Questao20(21);
+        Questao15(2006, 9, 20);
     }
 
     // 1 - Faça um algoritmo que leia os valores de A, B, C e em seguida imprima na tela a soma entre A e B é mostre se a soma é menor que C.
@@ -87,30 +90,31 @@ public class ExerciciosBasicos01 {
             return "Valores Diferentes: Valor1: " + valor1 + " Valor2: " + valor2;
         }
     }
+
     // 8 - Faça um algoritmo que leia três valores inteiros diferentes e imprima na tela os valores em ordem decrescente.
-    public static String Questao08(int valor1,int  valor2,int  valor3) {
+    public static String Questao08(int valor1, int valor2, int valor3) {
         if (valor1 > valor2 && valor1 > valor3) {
             if (valor2 > valor3) {
-                String valorOrdenados = ("Maior: "+valor1 + " Medio: "+ valor2 + " Pequeno: "+ valor3 );
+                String valorOrdenados = ("Maior: " + valor1 + " Medio: " + valor2 + " Pequeno: " + valor3);
                 return valorOrdenados;
             } else {
-                String valorOrdenados = ("Maior: "+valor1 + " Medio: "+ valor3 + " Pequeno: "+ valor2 );
+                String valorOrdenados = ("Maior: " + valor1 + " Medio: " + valor3 + " Pequeno: " + valor2);
                 return valorOrdenados;
             }
-        } else if (valor2 > valor1 && valor2 > valor3){
+        } else if (valor2 > valor1 && valor2 > valor3) {
             if (valor1 > valor3) {
-                String valorOrdenados = ("Maior: "+valor2 + " Medio: "+ valor1 + " Pequeno: "+ valor3 );
+                String valorOrdenados = ("Maior: " + valor2 + " Medio: " + valor1 + " Pequeno: " + valor3);
                 return valorOrdenados;
             } else {
-                String valorOrdenados = ("Maior: "+valor2 + " Medio: "+ valor3 + " Pequeno: "+ valor1 );
+                String valorOrdenados = ("Maior: " + valor2 + " Medio: " + valor3 + " Pequeno: " + valor1);
                 return valorOrdenados;
             }
         } else {
             if (valor2 > valor1) {
-                String valorOrdenados = ("Maior: "+valor3 + " Medio: "+ valor2 + " Pequeno: "+ valor1 );
+                String valorOrdenados = ("Maior: " + valor3 + " Medio: " + valor2 + " Pequeno: " + valor1);
                 return valorOrdenados;
             } else {
-                String valorOrdenados = ("Maior: "+valor3 + " Medio: "+ valor1 + " Pequeno: "+ valor2 );
+                String valorOrdenados = ("Maior: " + valor3 + " Medio: " + valor1 + " Pequeno: " + valor2);
                 return valorOrdenados;
             }
         }
@@ -154,11 +158,11 @@ public class ExerciciosBasicos01 {
         }
     }
 
-     // 10 - Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.
-     public static void Questao10(double nota1, double nota2, double nota3) {
+    // 10 - Faça um algoritmo que leia três notas obtidas por um aluno, e imprima na tela a média das notas.
+    public static void Questao10(double nota1, double nota2, double nota3) {
         double media = (nota1 + nota2 + nota3) / 3;
-         System.out.println(media);
-     }
+        System.out.println(media);
+    }
 
     // 11 - Faça um algoritmo que leia quatro notas obtidas por um aluno, calcule a média das nota obtidas, imprima na tela o nome do aluno e
     //      se o aluno foi aprovado ou reprovado. Para o aluno ser considerado aprovado sua média final deve ser maior ou igual a 7.
@@ -166,9 +170,9 @@ public class ExerciciosBasicos01 {
         double mediaAluno = (nota1 + nota2 + nota3 + nota4) / 4;
         double mediaEscolar = 7;
         if (mediaAluno > mediaEscolar) {
-            System.out.println("Aluno(a): "+nomeAluno + " Situação: APROVADO");
+            System.out.println("Aluno(a): " + nomeAluno + " Situação: APROVADO");
         } else {
-            System.out.println("Aluno(a): "+nomeAluno + " Situação: REPROVADO");
+            System.out.println("Aluno(a): " + nomeAluno + " Situação: REPROVADO");
         }
     }
 
@@ -180,15 +184,53 @@ public class ExerciciosBasicos01 {
      2 - À Vista no cartão de crédito, recebe 10% de desconto
      3 - Parcelado no cartão em duas vezes, preço normal do produto sem juros
      4 - Parcelado no cartão em três vezes ou mais, preço normal do produto mais juros de 10% */
+    public static void Questao12(double valorProduto) {
+        Scanner leitor = new Scanner(System.in);
 
+        int tipoPagamento = 0;
+        while (tipoPagamento < 1 || tipoPagamento > 4) {
+            System.out.println();
+            System.out.println("Digite 1 para: À Vista em Dinheiro ou Pix");
+            System.out.println("Digite 2 para: À Vista no cartão de crédito");
+            System.out.println("Digite 3 para: Parcelado no cartão em duas vezes");
+            System.out.println("Digite 4 para: Parcelado no cartão em três vezes ou mais");
+            System.out.println();
+            System.out.print("Digite sua opção: ");
+            tipoPagamento = leitor.nextInt();
+            leitor.nextLine();
+            double produtoDescontado = 1;
 
+            switch (tipoPagamento) {
+                case 1:
+                    produtoDescontado = valorProduto - (valorProduto * 0.15);
+                    System.out.println("Seu produto recebeu desconto de 15%.");
+                    break;
+                case 2:
+                    produtoDescontado = valorProduto - (valorProduto * 0.1);
+                    System.out.println("Seu produto recebeu desconto de 10%.");
+                    break;
+                case 3:
+                    System.out.println("Preço normal do produto.");
+                    produtoDescontado = valorProduto;
+                    break;
+                case 4:
+                    produtoDescontado = valorProduto + (valorProduto * 0.1);
+                    System.out.println("Seu produto recebeu uma taxa de 10%.");
+                    break;
+                default:
+                    System.out.println("Digite um número entre 1 a 4.");
+                    break;
+            }
+            System.out.println("Valor do produto: " + produtoDescontado);
+        }
+    }
 
     // 13 - Faça algoritmo que leia o nome e a idade e imprima na tela o nome da pessoa e se ela é maior ou menor de idade.
     public static void Questao13(String nome, int idade) {
         if (idade > 18) {
-            System.out.println(nome+" é maior de idade. Sua idade é "+idade);
+            System.out.println(nome + " é maior de idade. Sua idade é " + idade);
         } else {
-            System.out.println(nome+"é menor de idade. Sua idade é "+idade);
+            System.out.println(nome + "é menor de idade. Sua idade é " + idade);
         }
     }
 
@@ -198,15 +240,35 @@ public class ExerciciosBasicos01 {
         valorB = valorA;
         valorA = valorAntigoB;
 
-        System.out.println("Valor A atualizado: "+ valorA);
-        System.out.println("Valor B atualizado: "+ valorB);
+        System.out.println("Valor A atualizado: " + valorA);
+        System.out.println("Valor B atualizado: " + valorB);
     }
+
     //15 - Faça um algoritmo que leia o ano em que uma pessoa nasceu, imprima na tela quantos anos, meses e dias essa pessoa ja viveu. Leve em
     //     consideração o ano com 365 dias e o mês com 30 dias.
     //     (Ex: 5 anos, 2 meses e 15 dias de vida)
-    public static void Questao15(int idadeNascimento) {
-        int dataAtual = 24012026;
+    public static void Questao15(int ano, int mes, int dia) {
+        LocalDate dataAtual = LocalDate.now();
+        int anoAtual = dataAtual.getYear();
+        int mesAtual = dataAtual.getMonthValue();
+        int diaAtual = dataAtual.getDayOfMonth();
+
+        int anos = anoAtual - ano;
+        int meses = mesAtual - mes;
+        int dias = diaAtual - dia;
+
+        if (dias < 0) {
+            dias += 30;
+            meses -= 1;
+        }
+
+        if (meses < 0) {
+            meses += 12;
+            anos -= 1;
+        }
+        System.out.println(anos + " anos, " + meses + " meses e " + dias + " dias de vida.");
     }
+
 
     // 16 - Faça um algoritmo que leia três valores que representam os três lados de um triângulo e verifique se são válidos, determine se o triângulo é
     //      equilátero, isósceles ou escaleno.
@@ -228,11 +290,12 @@ public class ExerciciosBasicos01 {
     // 17 - Faça um algoritmo que leia uma temperatura em Fahrenheit e calcule a temperatura correspondente em grau Celsius. Imprima na tela as duas temperaturas.
     //      Fórmula: C = (5 * ( F-32) / 9)
     public static void Questao17(double temperaturaF) {
-        double celsius = (5 * ( temperaturaF-32) / 9);
+        double celsius = (5 * (temperaturaF - 32) / 9);
 
         System.out.println("Temperatura em Celsius:" + celsius);
         System.out.println("Temperatura em Fahrenheit:" + temperaturaF);
     }
+
     // 18 - Francisco tem 1,50m e cresce 2 centímetros por ano, enquanto Sara tem 1,10m e cresce 3 centímetros por ano. Faça um algoritmo que calcule e imprima
     //      na tela em quantos anos serão necessários para que Sara seja maior que Francisco.
     public static void Questao18() {
@@ -244,14 +307,15 @@ public class ExerciciosBasicos01 {
             francisco += 0.02;
             contadorAno++;
         }
-        System.out.println("Será necessários "+contadorAno+ " anos, para que Francisco seja menor que Sara.");
+        System.out.println("Será necessários " + contadorAno + " anos, para que Francisco seja menor que Sara.");
     }
+
     // 19 - Faça um algoritmo que imprima na tela a tabuada de 1 até 10.
     public static void Questao19() {
         for (int i = 1; i < 11; i++) {
             for (int tabuada = 1; tabuada < 11; tabuada++) {
                 int resultado = tabuada * i;
-                System.out.println(tabuada+" X " + i + " = " + resultado);
+                System.out.println(tabuada + " X " + i + " = " + resultado);
             }
             System.out.println("------------------");
         }
@@ -261,19 +325,49 @@ public class ExerciciosBasicos01 {
     public static void Questao20(int valor) {
         for (int i = 0; i < 11; i++) {
             int resultado = valor * i;
-            System.out.println(valor+" X " + i + " = " + resultado);
+            System.out.println(valor + " X " + i + " = " + resultado);
         }
     }
-  /*
-21 - Faça um algoritmo que mostre um valor aleatório entre 0 e 100.
 
-22 - Faça um algoritmo que leia dois valores inteiros A e B, imprima na tela o quociente e o resto da divisão inteira entre eles.
+    // 21 - Faça um algoritmo que mostre um valor aleatório entre 0 e 100.
+    public static void Questao21() {
+        Random random = new Random();
+        int numeroGerado = random.nextInt(101);
+        System.out.println(numeroGerado);
+    }
 
-21 - Faça um algoritmo que efetue o cálculo do salário líquido de um professor. As informações fornecidas serão: valor da hora aula, número de aulas lecionadas no mês e percentual de desconto do INSS. Imprima na tela o salário líquido final.
+    // 22 - Faça um algoritmo que leia dois valores inteiros A e B, imprima na tela o quociente e o resto da divisão inteira entre eles.
+    public static void Questao22(int A, int B) {
+        int resultado = A / B;
+        int resto = A % B;
 
-22 - Faça um algoritmo que calcule a quantidade de litros de combustível gastos em uma viagem, sabendo que o carro faz 12km com um litro. Deve-se fornecer ao usuário o tempo que será gasto na viagem a sua velocidade média, distância percorrida e a quantidade de litros utilizados para fazer a viagem.
+        System.out.println("O quociente: " + resultado);
+        System.out.println("O resto da divisão inteira entre eles: " + resto);
+    }
 
-Fórmula: distância = tempo x velocidade.
-            litros usados = distância / 12. */
+    // 23 - Faça um algoritmo que efetue o cálculo do salário líquido de um professor. As informações fornecidas serão: valor da hora aula,
+    //      número de aulas lecionadas no mês e percentual de desconto do INSS. Imprima na tela o salário líquido final.
+    public static void Questao23(double valorHora, int numAulas) {
+        final double ISENCAO_INSS = 3000;
+        double salarioProfessor = valorHora * numAulas;
 
+        if (salarioProfessor > ISENCAO_INSS) {
+            salarioProfessor -= (salarioProfessor * 0.15);
+        }
+        System.out.println("Salário líquido do professor: " + salarioProfessor + "$");
+    }
+
+    /*
+      24 - Faça um algoritmo que calcule a quantidade de litros de combustível gastos em uma viagem, sabendo que o carro faz 12km com um litro. Deve-se fornecer
+           ao usuário o tempo que será gasto na viagem a sua velocidade média, distância percorrida e a quantidade de litros utilizados para fazer a viagem.
+           Fórmula: distância = tempo x velocidade.
+               litros usados = distância / 12. */
+    public static void Questao24(double tempoViagemEmHoras, double velocidadeMedia) {
+        final double KM_POR_LITRO = 12;
+        double distancia = tempoViagemEmHoras * velocidadeMedia;
+        double litrosUsados = distancia / KM_POR_LITRO;
+
+        System.out.println("Litros gasto na viagem: " + litrosUsados + "L");
+        System.out.println("Distância pecorrida: " + distancia + " km");
+    }
 }

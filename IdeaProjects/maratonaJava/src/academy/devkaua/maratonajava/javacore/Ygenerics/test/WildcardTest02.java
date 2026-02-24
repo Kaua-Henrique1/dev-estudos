@@ -14,8 +14,10 @@ public class WildcardTest02 {
         for (Animal animal : animals) {
             animal.consulta();
         }
-        // agora nao pode adicionar, pois as
-        //animals.add(new Cachorro());
+        // Não é permitido adicionar (exceto null), pois 'animals' pode ser uma lista
+        // de um subtipo específico que não aceita Cachorro.
+        // Ex: Se a lista passada for List<Gato>, adicionar um Cachorro quebraria o código.
+        // animals.add(new Cachorro()); // Erro de compilação: capture of ? extends Animal
     }
 
     // Assim o java sabe quais tipos as classes filhas vao ser... Para poder adicionar elas na list.

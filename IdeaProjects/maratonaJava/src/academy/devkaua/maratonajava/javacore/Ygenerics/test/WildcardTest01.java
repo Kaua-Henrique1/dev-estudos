@@ -1,7 +1,5 @@
 package academy.devkaua.maratonajava.javacore.Ygenerics.test;
 
-import javax.security.auth.callback.CallbackHandler;
-
 abstract class Animal {
     public abstract void consulta();
 }

@@ -2,7 +2,6 @@ package academy.devkaua.maratonajava.javacore.Ygenerics.test;
 
 import academy.devkaua.maratonajava.javacore.Ygenerics.domain.Barco;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GenericoMetodoTest01 {

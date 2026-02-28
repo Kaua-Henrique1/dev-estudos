@@ -1,4 +1,4 @@
-package academy.devkaua.maratonajava.javacore.ZZAcomportamento.domain;
+package academy.devkaua.maratonajava.javacore.ZZBlambdas.domain;
 
 public class Car {
     private String name = "Audi";
@@ -10,10 +10,6 @@ public class Car {
         this.year = year;
     }
 
-    public String getName() {
-        return name;
-    }
-
     @Override
     public String toString() {
         return "Car{" +
@@ -21,6 +17,11 @@ public class Car {
                 ", color='" + color + '\'' +
                 ", year=" + year +
                 '}';
+    }
+
+
+    public String getName() {
+        return name;
     }
 
     public String getColor() {

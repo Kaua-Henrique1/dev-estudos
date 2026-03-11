@@ -1,5 +1,6 @@
 ## 1. `equals()` e `hashCode()`
 São métodos da classe `Object` usados pelas coleções para comparar e organizar elementos.
+> EX.: Quando quiser comparar objeto apenas pelo atributo NOME, teria que sobrescrever e ajustar a lógica.
 * **`equals()`:** Compara se o *conteúdo/estado* de dois objetos é igual.
 * **`hashCode()`:** Gera um código numérico de identificação rápida para o objeto. 
 - **Exemplo**: Imagine uma lista de 1.000.000 de objetos, se categoriza eles em grupos, por exemplo, por quantidade de letras no nome.
@@ -47,7 +48,7 @@ São métodos da classe `Object` usados pelas coleções para comparar e organiz
 * **Uso no dia dia:** Cruzamento de dados e buscas rápidas em memória.
 * *Exemplo:* Em vez de varrer uma lista gigante para achar um cliente, você cria um mapa indexado pelo ID e busca direto com `mapa.get(10L)`. Evita laços (`for`) aninhados.
 
-### 🥉 3º Lugar: `Set` / `HashSet`
+### `Set` / `HashSet`
 * **Como funciona:** **Não aceita** elementos duplicados. Na maioria das vezes, não mantém a ordem.
 * **Uso no dia dia:** Remoção rápida de duplicatas.
 * *Exemplo:* Extrair apenas os IDs únicos de clientes de dentro de uma lista com milhares de transações financeiras.

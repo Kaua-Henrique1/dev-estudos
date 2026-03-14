@@ -1,4 +1,4 @@
-package academy.devkaua.maratonajava.javacore.ZZEpatternproject.domain;
+package academy.devkaua.maratonajava.javacore.ZZEpatternproject.Factory.domain;
 
 public interface Currency {
     String getSymbol();

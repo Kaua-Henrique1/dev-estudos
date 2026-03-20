@@ -13,7 +13,7 @@ Este repositório serve como um hub central para todos os meus estudos técnicos
 | [DevOps](./estudos-DevOps) | scripts | Realizar Curso Prof. Tadeu IFRN | |
 | [Docker](./projetos-docker) | Containerização e Orquestração | Em progresso | `Docker`, `Compose` |
 |       - [MySQL](./projetos-docker/projeto-mysql/) | Comandos via terminal e modelagem de dados | Em progresso | `MySQL` |
-| [Java](./IdeaProjects/maratonaJava) | Orientação a Objetos (OO), ArraysJava IO, Exceções, Boas práticas de código | Em progresso | `Java` |
+| [Java](java/maratonaJava) | Orientação a Objetos (OO), ArraysJava IO, Exceções, Boas práticas de código | Em progresso | `Java` |
 
 ---
 Docker/MySQL	Infra: Docker / Estudo: MySQL via Terminal

@@ -8,12 +8,13 @@ Este repositório serve como um hub central para todos os meus estudos técnicos
 
 | Pasta | Descrição | Status | Techs |
 | :--- | :--- | :---: | :--- |
-| [Angular](./angular-estudos) | Fundamentos de Angular, Componentes | Em progresso | `Angular` |
+| [Angular](./angular) | Reatividade com **Signals**, Arquitetura de Componentes e SPA | Em progresso | `Angular 17+`, `TS` |
+| [Java](./java) | Do básico ao **JDBC**, Programação Funcional (Streams/Lambdas) e Maven | Em progresso | `Java`, `Maven`, `PostgreSQL` |
 | [TypeScript](./typescript) | Tipagem avançada, Interfaces e Generics | Em progresso | `TypeScript` |
-| [DevOps](./estudos-DevOps) | scripts | Realizar Curso Prof. Tadeu IFRN | |
 | [Docker](./projetos-docker) | Containerização e Orquestração | Em progresso | `Docker`, `Compose` |
 |       - [MySQL](./projetos-docker/projeto-mysql/) | Comandos via terminal e modelagem de dados | Em progresso | `MySQL` |
-| [Java](java/maratonaJava) | Orientação a Objetos (OO), ArraysJava IO, Exceções, Boas práticas de código | Em progresso | `Java` |
+
+---
 
 ---
 Docker/MySQL	Infra: Docker / Estudo: MySQL via Terminal

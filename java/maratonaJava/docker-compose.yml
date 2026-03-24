@@ -10,5 +10,15 @@ services:
     volumes:
       - devkaua_data:/var/lib/postgresql
 
+  db_dois:
+    image: postgres
+    container_name: pg_subconsultas
+    environment:
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: bd_subconsultas
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./database/script/script_subconsultas.sql:/docker-entrypoint-initdb.d/init.sql
 volumes:
   devkaua_data:

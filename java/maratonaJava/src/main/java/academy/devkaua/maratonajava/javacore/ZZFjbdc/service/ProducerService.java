@@ -3,6 +3,8 @@ package academy.devkaua.maratonajava.javacore.ZZFjbdc.service;
 import academy.devkaua.maratonajava.javacore.ZZFjbdc.domain.Producer;
 import academy.devkaua.maratonajava.javacore.ZZFjbdc.repository.ProducerRepository;
 
+import java.util.List;
+
 public class ProducerService {
     public static void save(Producer producer) {
         ProducerRepository.save(producer);
@@ -18,11 +20,13 @@ public class ProducerService {
         ProducerRepository.update(producer);
     }
 
+    public static List<Producer> findByName(String name) {
+        return ProducerRepository.findName(name);
+    }
+
     private static void requireValidId(Integer id) {
         if (id == null || id <= 0 ) {
             throw new IllegalArgumentException("Invalid value for ID");
         }
     }
-
-
 }

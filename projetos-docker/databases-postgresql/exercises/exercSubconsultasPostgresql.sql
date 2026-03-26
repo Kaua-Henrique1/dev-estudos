@@ -11,7 +11,9 @@ select nome_produto, preco_venda
 
 select tp.nome_produto, tp.preco_venda, tp.id_categoria
   from tb_produto tp
- where tp.id_categoria = (select tc.id_categoria  from tb_categoria tc where tc.nome_categoria = 'Periféricos');
+ where tp.id_categoria = (select tc.id_categoria
+                            from tb_categoria tc
+                           where tc.nome_categoria = 'Periféricos');
 
 --
 -- Vendas de Peso: Liste todas as vendas cujo valor_total_venda seja maior do que a média do
@@ -28,8 +30,8 @@ select *
 select tp.id_produto, tp.nome_produto
   from tb_produto tp
  where tp.id_produto not in (select tvi.id_produto
-	                            from tb_venda_item tvi
-	                           )
+	                           from tb_venda_item tvi
+	                        )
 
 -- Painel de Comparação: Crie uma query que mostre o nome do produto, o preço dele e, em
 -- uma terceira coluna gerada por subconsulta no SELECT, mostre a média de preço da categoria a qual ele pertence.
@@ -37,5 +39,6 @@ select tp.id_produto, tp.nome_produto
 SELECT tp.nome_produto, tp.preco_venda, (SELECT AVG(tp2.preco_venda)
                                           FROM tb_produto tp2
                                           WHERE tp2.id_categoria = tp.id_categoria) AS media_da_categoria
-from tb_produto tp
+  from tb_produto tp
+
 

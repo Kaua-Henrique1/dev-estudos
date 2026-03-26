@@ -6,7 +6,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProducerRepository {
     private static final Logger log = LogManager.getLogger(ProducerRepository.class);
@@ -49,5 +52,27 @@ public class ProducerRepository {
         } catch (Exception e) {
             log.error("Error while trying update '{}'", producer.getId(), e);
         }
+    }
+
+    public static List<Producer> findName(String name) {
+        log.info("Finding all Producers");
+        String sql = "SELECT * FROM producer WHERE name LIKE '%%%s%%';".formatted(name);
+        List<Producer> producers = new ArrayList<>();
+        try (Connection conn = ConnectionFactory.getConnection();
+             Statement stmt = conn.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            while (rs.next()) {
+                Producer producer = Producer
+                        .builder()
+                        .id(rs.getInt("id_producer"))
+                        .name(rs.getString("name"))
+                        .build();
+                producers.add(producer);
+            }
+        } catch (Exception e) {
+            log.error("Error while trying producers name '{}'", name, e);
+        }
+        return producers;
     }
 }

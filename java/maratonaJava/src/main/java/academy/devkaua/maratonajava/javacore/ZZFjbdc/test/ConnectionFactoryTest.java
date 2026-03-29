@@ -11,9 +11,10 @@ public class ConnectionFactoryTest {
     public static void main(String[] args) {
         //Producer producer = Producer.builder().name("Studio Medio").build();
         //ProducerService.save(producer);
-
-        List<Producer> producers = ProducerService.findByName("Studio Pequeno");
+        //List<Producer> producers = ProducerService.findByName("Studio Pequeno");
+        //log.info("Producers found '{}'", producers);
+        //ProducerService.showProducerMetadata();
+        List<Producer> producers = ProducerService.findNamePreparedStatement("Studio");
         log.info("Producers found '{}'", producers);
-
     }
 }

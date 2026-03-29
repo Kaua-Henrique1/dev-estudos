@@ -10,6 +10,11 @@ public class ProducerService {
         ProducerRepository.save(producer);
     }
 
+    public static void saveTransaction(List<Producer> producers) {
+        ProducerRepository.saveTrasaction(producers);
+    }
+
+
     public static void delete(Integer id) {
         requireValidId(id);
         ProducerRepository.delete(id);
@@ -20,9 +25,23 @@ public class ProducerService {
         ProducerRepository.update(producer);
     }
 
+    public static void updatePreparedStatement(Producer producer) {
+        requireValidId(producer.getId());
+        ProducerRepository.updatePreparedStatement(producer);
+    }
+
     public static List<Producer> findByName(String name) {
         return ProducerRepository.findName(name);
     }
+
+    public static List<Producer> findNamePreparedStatement(String name) {
+        return ProducerRepository.findNamePreparedStatement(name);
+    }
+
+    public static void showProducerMetadata() {
+        ProducerRepository.showProducerMetadata();
+    }
+
 
     private static void requireValidId(Integer id) {
         if (id == null || id <= 0 ) {

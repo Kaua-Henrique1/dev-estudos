@@ -2,7 +2,6 @@ package academy.devkaua.maratonajava.javacore.ZZEpatternproject.DataTransferObje
 
 import academy.devkaua.maratonajava.javacore.ZZEpatternproject.Factory.domain.Country;
 import academy.devkaua.maratonajava.javacore.ZZEpatternproject.Factory.domain.Currency;
-import academy.devkaua.maratonajava.javacore.ZZEpatternproject.singleton.domain.Aircraft;
 
 public class ReportDto {
     private String aircraftName;

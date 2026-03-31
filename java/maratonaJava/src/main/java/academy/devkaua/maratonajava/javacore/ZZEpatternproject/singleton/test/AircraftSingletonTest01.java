@@ -1,6 +1,5 @@
 package academy.devkaua.maratonajava.javacore.ZZEpatternproject.singleton.test;
 
-import academy.devkaua.maratonajava.javacore.ZZEpatternproject.singleton.domain.Aircraft;
 import academy.devkaua.maratonajava.javacore.ZZEpatternproject.singleton.domain.AircraftSingletonEager;
 
 public class AircraftSingletonTest01 {

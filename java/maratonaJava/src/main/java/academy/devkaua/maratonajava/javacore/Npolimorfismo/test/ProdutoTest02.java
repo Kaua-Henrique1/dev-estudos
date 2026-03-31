@@ -1,7 +1,6 @@
 package academy.devkaua.maratonajava.javacore.Npolimorfismo.test;
 
 import academy.devkaua.maratonajava.javacore.Npolimorfismo.domain.Computador;
-import academy.devkaua.maratonajava.javacore.Npolimorfismo.domain.Produto;
 import academy.devkaua.maratonajava.javacore.Npolimorfismo.domain.Tomate;
 import academy.devkaua.maratonajava.javacore.Npolimorfismo.service.CalculadorImposto;
 

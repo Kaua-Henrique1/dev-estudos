@@ -3,7 +3,10 @@ package academy.devkaua.maratonajava.javacore.ZZDstreams.test;
 import academy.devkaua.maratonajava.javacore.ZZDstreams.domain.Category;
 import academy.devkaua.maratonajava.javacore.ZZDstreams.domain.LightNovel;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StreamTest04Grouping {

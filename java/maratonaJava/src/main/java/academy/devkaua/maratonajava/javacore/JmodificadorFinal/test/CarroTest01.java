@@ -1,11 +1,7 @@
 package academy.devkaua.maratonajava.javacore.JmodificadorFinal.test;
 
 import academy.devkaua.maratonajava.javacore.JmodificadorFinal.domain.Carro;
-import academy.devkaua.maratonajava.javacore.JmodificadorFinal.domain.Comprador;
 import academy.devkaua.maratonajava.javacore.JmodificadorFinal.domain.Ferarri;
-
-import javax.xml.stream.FactoryConfigurationError;
-import java.sql.SQLOutput;
 
 public class CarroTest01 {
     public static void main(String[] args) {

@@ -3,7 +3,6 @@ package academy.devkaua.maratonajava.javacore.ZZDstreams.test;
 import academy.devkaua.maratonajava.javacore.ZZDstreams.domain.LightNovel;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;

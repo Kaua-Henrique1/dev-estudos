@@ -3,7 +3,6 @@ package academy.devkaua.maratonajava.javacore.Xcolecoes.test;
 import academy.devkaua.maratonajava.javacore.Xcolecoes.domain.Consumidor;
 import academy.devkaua.maratonajava.javacore.Xcolecoes.domain.Manga;
 
-import java.awt.font.FontRenderContext;
 import java.util.HashMap;
 import java.util.Map;
 

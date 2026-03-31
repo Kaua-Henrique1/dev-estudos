@@ -2,7 +2,6 @@ package academy.devkaua.maratonajava.javacore.ZZDstreams.test;
 
 import academy.devkaua.maratonajava.javacore.ZZDstreams.domain.Category;
 import academy.devkaua.maratonajava.javacore.ZZDstreams.domain.LightNovel;
-import academy.devkaua.maratonajava.javacore.ZZDstreams.domain.Promotion;
 
 import java.util.*;
 import java.util.stream.Collectors;

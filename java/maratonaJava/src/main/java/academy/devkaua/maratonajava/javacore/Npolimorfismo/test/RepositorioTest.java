@@ -2,7 +2,6 @@ package academy.devkaua.maratonajava.javacore.Npolimorfismo.test;
 
 import academy.devkaua.maratonajava.javacore.Npolimorfismo.repositorio.Repositorio;
 import academy.devkaua.maratonajava.javacore.Npolimorfismo.service.RepositorioArquivo;
-import academy.devkaua.maratonajava.javacore.Npolimorfismo.service.RepositorioBancoDaDados;
 
 public class RepositorioTest {
     public static void main(String[] args) {

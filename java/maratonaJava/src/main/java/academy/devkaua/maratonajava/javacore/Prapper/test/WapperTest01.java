@@ -1,8 +1,5 @@
 package academy.devkaua.maratonajava.javacore.Prapper.test;
 
-import java.sql.SQLOutput;
-import java.util.List;
-
 public class WapperTest01 {
     public static void main(String[] args) {
         //Sempre que for possivel, usar o primitivo

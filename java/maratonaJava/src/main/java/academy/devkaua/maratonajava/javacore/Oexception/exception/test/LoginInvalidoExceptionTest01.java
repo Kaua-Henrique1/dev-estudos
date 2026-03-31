@@ -2,7 +2,6 @@ package academy.devkaua.maratonajava.javacore.Oexception.exception.test;
 
 import academy.devkaua.maratonajava.javacore.Oexception.exception.domain.LoginInvalidoException;
 
-import javax.security.auth.login.LoginException;
 import java.util.Scanner;
 
 public class LoginInvalidoExceptionTest01 {

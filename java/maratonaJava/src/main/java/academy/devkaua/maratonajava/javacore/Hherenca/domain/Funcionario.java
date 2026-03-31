@@ -1,7 +1,5 @@
 package academy.devkaua.maratonajava.javacore.Hherenca.domain;
 
-import javax.swing.plaf.PanelUI;
-
 public class Funcionario extends Pessoa {
     private double salario;
 

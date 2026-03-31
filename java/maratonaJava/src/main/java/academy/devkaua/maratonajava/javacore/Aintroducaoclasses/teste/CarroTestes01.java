@@ -1,7 +1,6 @@
 package academy.devkaua.maratonajava.javacore.Aintroducaoclasses.teste;
 
 import academy.devkaua.maratonajava.javacore.Aintroducaoclasses.dominio.Carro;
-import academy.devkaua.maratonajava.javacore.Aintroducaoclasses.dominio.Estudante;
 
 public class CarroTestes01 {
     public static void main(String[] args) {

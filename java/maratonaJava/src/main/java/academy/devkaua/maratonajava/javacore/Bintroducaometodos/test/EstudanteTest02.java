@@ -1,7 +1,6 @@
 package academy.devkaua.maratonajava.javacore.Bintroducaometodos.test;
 
 import academy.devkaua.maratonajava.javacore.Bintroducaometodos.dominio.Estudante;
-import academy.devkaua.maratonajava.javacore.Bintroducaometodos.dominio.ImpressoraEstudante;
 
 public class EstudanteTest02 {
     public static void main(String[] args) {

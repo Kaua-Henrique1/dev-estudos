@@ -4,7 +4,10 @@ import academy.devkaua.maratonajava.javacore.ZZDstreams.domain.Category;
 import academy.devkaua.maratonajava.javacore.ZZDstreams.domain.LightNovel;
 import academy.devkaua.maratonajava.javacore.ZZDstreams.domain.Promotion;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.DoubleSummaryStatistics;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class StreamTest07Grouping {

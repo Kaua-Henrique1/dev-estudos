@@ -2,7 +2,7 @@
 
 Repositório dedicado ao aprendizado da linguagem Java, seguindo uma trilha de fundamentos até recursos avançados do DevDojo.
 
-### Tópicos em Foco:
+### Tópicos de mais relevância estudados:
 * **JDBC & Banco de Dados::** Integração com PostgreSQL para operações de CRUD (Create, Read, Update, Delete) utilizando Statement e PreparedStatement.
 * **Java Moderno (Lambdas & Streams):** Padronização da estrutura do projeto e controle automatizado de bibliotecas externas (como drivers JDBC e Log4j2).
 * **Generics & Coleções:** Implementação de estruturas flexíveis e tipagem segura para manipulação de dados.

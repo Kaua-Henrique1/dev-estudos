@@ -1,5 +1,8 @@
 package academy.devkaua.maratonajava.leetCode.recursividade.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class recursiva {
     public static void main(String[] args) {
 //        int num = 100;
@@ -7,7 +10,7 @@ public class recursiva {
 
 //        System.out.println(multiplicacao(5, -5));
 
-//        System.out.println(baseBinaria(59));
+        System.out.println(baseBinaria(59));
     }
 
     //    4. Implemente uma função recursiva que receba um número inteiro positivo n e calcule o somatório
@@ -48,6 +51,19 @@ public class recursiva {
 
 //    8. Implemente uma função recursiva para dizer se uma palavra é palíndroma.
 
+    public static boolean palindromo(String s) {
+        int tamanhoFinal = s.length();
+
+        char primeiraLetra = s.charAt(0);
+        char ultimaLetra = s.charAt(tamanhoFinal);
+        
+        if (primeiraLetra == primeiraLetra) {
+            tring sReduzido = s.substring(0, primeiraLetra) + s.substring(primeiraLetra + 1) ;
+            
+            return palindromo(s);
+        }
+
+    }
 //    9. Pesquise como se pode desenvolver uma função de Fibonacci recursiva que seja eficiente e
 //    implemente essa solução.
 

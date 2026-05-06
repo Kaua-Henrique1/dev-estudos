@@ -83,24 +83,25 @@
     ]
   },
   "packageFolders": {
-    "D:\\Usuarios\\20251148060019\\.nuget\\packages\\": {}
+    "/home/jaua/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Usuarios\\20251148060019\\Documents\\dev-estudos\\dotnet\\exercicio01\\exercicio01.csproj",
+      "projectUniqueName": "/home/jaua/Documents/IdeaProjects/dev-estudos/dotnet/exercicio01/exercicio01.csproj",
       "projectName": "exercicio01",
-      "projectPath": "d:\\Usuarios\\20251148060019\\Documents\\dev-estudos\\dotnet\\exercicio01\\exercicio01.csproj",
-      "packagesPath": "D:\\Usuarios\\20251148060019\\.nuget\\packages\\",
-      "outputPath": "d:\\Usuarios\\20251148060019\\Documents\\dev-estudos\\dotnet\\exercicio01\\obj\\",
+      "projectPath": "/home/jaua/Documents/IdeaProjects/dev-estudos/dotnet/exercicio01/exercicio01.csproj",
+      "packagesPath": "/home/jaua/.nuget/packages/",
+      "outputPath": "/home/jaua/Documents/IdeaProjects/dev-estudos/dotnet/exercicio01/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "D:\\Usuarios\\20251148060019\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/jaua/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
       ],
       "sources": {
+        "/usr/lib/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -119,7 +120,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net10.0": {
@@ -149,7 +150,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/10.0.107/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "g6nCjjh1NCw=",
+  "dgSpecHash": "N5C7nXwfF3Y=",
   "success": true,
-  "projectFilePath": "d:\\Usuarios\\20251148060019\\Documents\\dev-estudos\\dotnet\\exercicio01\\exercicio01.csproj",
+  "projectFilePath": "/home/jaua/Documents/IdeaProjects/dev-estudos/dotnet/exercicio01/exercicio01.csproj",
   "expectedPackageFiles": [
-    "D:\\Usuarios\\20251148060019\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.5\\microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512",
-    "D:\\Usuarios\\20251148060019\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512"
+    "/home/jaua/.nuget/packages/microsoft.aspnetcore.openapi/10.0.5/microsoft.aspnetcore.openapi.10.0.5.nupkg.sha512",
+    "/home/jaua/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
   ],
   "logs": []
 }

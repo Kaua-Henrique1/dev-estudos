@@ -37,7 +37,7 @@ namespace MyApp.Namespace
         [HttpPost]
         public ActionResult<Cliente> Post(Cliente cliente)
         {
-            cliente.Codigo = clientes.Count + 1; // Simula um código auto-incremental
+           cliente.Codigo = clientes.Count + 1; // Simula um código auto-incremental
             clientes.Add(cliente);
             return CreatedAtRoute(nameof(Get), new { id = cliente.Codigo }, cliente);
         }

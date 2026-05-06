@@ -16,3 +16,23 @@ npm-debug.log
 *.iml
 out/
 target/
+
+# === .NET / Visual Studio Code ===
+bin/
+obj/
+TestResults/
+[Log]/
+
+# Arquivos de publicação e builds
+appsettings.Development.json
+*.exe
+*.dll
+*.pdb
+*.user
+*.suo
+
+# Cache do NuGet
+project.lock.json
+project.nuget.cache
+*.nuget.props
+*.nuget.targets

@@ -26,6 +26,14 @@ public class AppDbContext : DbContext
             entity.Property(e => e.nome).IsRequired().HasMaxLength(100);
             entity.Property(e => e.Preco).HasColumnType("decimal(18,2)");
         });
+
+        modelBuilder.Entity<Usuario>(entity =>
+        {
+            entity.HasKey(e => e.codigo);
+            entity.Property(e => e.nome).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.email).IsRequired().HasMaxLength(50);
+            entity.Property(e => e.senha).IsRequired().HasMaxLength(50);
+        });
     }
 
     public DbSet<Cliente> Clientes { get; set; }

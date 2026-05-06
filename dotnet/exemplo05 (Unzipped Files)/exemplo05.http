@@ -1,0 +1,6 @@
+@exemplo05_HostAddress = http://localhost:5182
+
+GET {{exemplo05_HostAddress}}/api/clientes
+Accept: application/json
+
+###

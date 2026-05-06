@@ -6,53 +6,55 @@ namespace exemplo05.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProdutoController : ControllerBase
+
+    public class UsuarioController : ControllerBase
     {
         private readonly AppDbContext _context;
 
-        public ProdutoController(AppDbContext context)
+        public UsuarioController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/Produto
+        // GET: api/Usuario
         [HttpGet]
-        public IEnumerable<Produto> Get()
+        public IEnumerable<Usuario> Get()
         {
-            return _context.Produtos;
+            return context.Usuarios;
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var produto = await _context.Produtos.FindAsync(id);
+            var usuario = await context.Usuarios.FindAsync(id);
 
-            if (produto == null)
+            
+            if (usuario == null)
             {
                 return NotFound();
             }
 
-            return Ok(produto);
+            return Ok(usuario);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Produto produto)
+        public async Task<IActionResult> Post(Usuario usuario)
         {
-            _context.Produtos.Add(produto);
+            _context.Usuarios.Add(usuario);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(Get), new { id = produto.codigo }, produto);
+            return CreatedAtAction(nameof(Get), new { id = usuario.codigo }, usuario);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(int id, Produto produto)
+        public async Task<IActionResult> Put(int id, Usuario usuario)
         {
-            if (id != produto.codigo)
+            if (id != usuario.codigo)
             {
                 return BadRequest();
             }
 
-            _context.Entry(produto).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _context.Entry(usuario).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
 
             try
             {
@@ -60,7 +62,7 @@ namespace exemplo05.Controllers
             }
             catch (Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException)
             {
-                if (!_context.Produtos.Any(e => e.codigo == id))
+                if (!_context.Usuarios.Any(e => e.codigo == id))
                 {
                     return NotFound();
                 }
@@ -76,17 +78,17 @@ namespace exemplo05.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var produto = await _context.Produtos.FindAsync(id);
-            if (produto == null)
+            var usuario = await _context.Usuarios.FindAsync(id);
+            if (usuario == null)
             {
                 return NotFound();
             }
 
-            _context.Produtos.Remove(produto);
+            _context.Usuarios.Remove(usuario);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
-
     }
+
 }
